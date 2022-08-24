@@ -89,6 +89,19 @@ function pagination(list, numpage) {
     }
     return page;
 }
+function search(list, query) {
+    let results = [];
+    for (i of list) {
+        let keys = Object.keys(i);
+        for (key of keys) {
+            if (i[key] == query) {
+                results.push(i);
+                break;
+            }
+        }
+    }
+    return results;
+}
 function render(list) {
     $(".row").empty();
     for (i of list) {
@@ -118,5 +131,11 @@ $("#update").click(function () {
     }
     cardsCopy.sort(sort);
     let page = pagination(cardsCopy, Number($("#numpage").val()));
+    render(page);
+});
+$("#search").click(function () {
+    let cardsCopy = JSON.parse(JSON.stringify(cards));
+    let searchr = search(cardsCopy, $("#query").val());
+    let page = pagination(searchr, Number($("#numpage").val()));
     render(page);
 });
