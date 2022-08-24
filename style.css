@@ -20,3 +20,6 @@ main {
 .cena {
     display: flex;
 }
+select {
+    display: block;
+}

@@ -14,154 +14,29 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         />
         <link rel="stylesheet" href="style.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script defer src="index.js"></script>
     </head>
     <body>
         <main>
             <div class="cards">
                 <div class="container">
-                    <div class="row">
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="elprimo.jpg" />
-                                    <span class="card-title">Эль примо</span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>Бесценно $</h5>
-                                    <p>Самый крутой бравлер.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">Купить бесплатно</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="elprimo.jpg" />
-                                    <span class="card-title">Эль примо</span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>Бесценно $</h5>
-                                    <p>Самый крутой бравлер.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">Купить бесплатно</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="elprimo.jpg" />
-                                    <span class="card-title">Эль примо</span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>Бесценно $</h5>
-                                    <p>Самый крутой бравлер.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">Купить бесплатно</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="elprimo.jpg" />
-                                    <span class="card-title">Эль примо</span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>Бесценно $</h5>
-                                    <p>Самый крутой бравлер.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">Купить бесплатно</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="elprimo.jpg" />
-                                    <span class="card-title">Эль примо</span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>Бесценно $</h5>
-                                    <p>Самый крутой бравлер.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">Купить бесплатно</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="elprimo.jpg" />
-                                    <span class="card-title">Эль примо</span>
-                                </div>
-                                <div class="card-content">
-                                    <h5>Бесценно $</h5>
-                                    <p>Самый крутой бравлер.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">Купить бесплатно</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="row"></div>
                 </div>
             </div>
             <div class="menu">
-                <h1>Цена</h1>
-                <div id="cena">
-                    <div class="input-field">
-                        <input
-                            placeholder="от"
-                            id="first_name"
-                            type="text"
-                            class="validate"
-                        />
-                    </div>
-                    <div class="input-field">
-                        <input
-                            placeholder="до"
-                            id="first_name"
-                            type="text"
-                            class="validate"
-                        />
-                    </div>
-                </div>
-                <a class="waves-effect waves-light btn">По возрастанию</a>
-                <a class="waves-effect waves-light btn">По убыванию</a>
-                <h1>Издатель</h1>
-                <p>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Бебра</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Бебра</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Бебра</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input type="checkbox" />
-                        <span>Бебра</span>
-                    </label>
-                </p>
+                <select name="" id="changefield">
+                    <option value="price">По цене</option>
+                    <option value="name">По имени</option>
+                    <option value="company">По бренду</option>
+                    <option value="views">По популярности</option>
+                </select>
+                <select name="" id="changedec">
+                    <option value="enc">По возрастанию</option>
+                    <option value="dec">По убыванию</option>
+                </select>
+                <input type="text" id="numpage" placeholder="numpage" />
+                <button id="update">update</button>
             </div>
         </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
